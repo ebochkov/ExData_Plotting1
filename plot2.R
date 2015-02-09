@@ -1,4 +1,5 @@
 data = read.table('working-data.txt')
 png(filename = "plot2.png")
-plot(data$Global_active_power, type="l", ylab='Global Active Power (kilowatts)', xlab='')
+plot(data$Global_active_power, type="l", ylab='Global Active Power (kilowatts)', xlab='', xaxt="n")
+axis(1, at = c(0, 1250, 2500), labels = c('Thu', 'Fri', 'Sat'))
 dev.off()
